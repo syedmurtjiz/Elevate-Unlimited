@@ -1,14 +1,12 @@
 'use client'; // only needed if using client-side interactivity (e.g., state, hooks)
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion, useAnimation, useMotionValue, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
 export default function WalkingMeditationHero() {
   const backgroundControls = useAnimation();
   const contentControls = useAnimation();
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isLoaded, setIsLoaded] = useState(false);
 
   // Mouse parallax effect
   const x = useMotionValue(0);
@@ -19,7 +17,6 @@ export default function WalkingMeditationHero() {
   const backgroundY = useTransform(y, [-100, 100], [-10, 10]);
 
   useEffect(() => {
-    setIsLoaded(true);
     const handleMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event;
       const { innerWidth, innerHeight } = window;
@@ -30,7 +27,6 @@ export default function WalkingMeditationHero() {
       
       x.set(xPos);
       y.set(yPos);
-      setMousePosition({ x: xPos, y: yPos });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
