@@ -75,7 +75,7 @@ const SectionFour = () => {
           className="text-center mb-16"
         >
           <h2 className="text-6xl font-bold text-white mb-2">SUCCESS</h2>
-          <div className="text-4xl font-light tracking-wider text-white/90" style={{ WebkitTextStroke: '1px white', WebkitTextFillColor: 'transparent' }}>
+          <div className="text-6xl font-light tracking-wider text-white/90" style={{ WebkitTextStroke: '1px white', WebkitTextFillColor: 'transparent' }}>
             STORIES
           </div>
         </motion.div>
@@ -121,7 +121,7 @@ const SectionFour = () => {
                     }}
                   >
                     <div className="text-white text-lg mb-8">
-                      <span className="text-5xl font-serif text-white absolute -top-4 left-4 opacity-80">"</span>
+                      <span className="text-5xl font-serif text-white absolute -top-4 left-4 opacity-80">“</span>
                       <p className="text-base leading-relaxed pt-4">{testimonial.quote}</p>
                     </div>
                     <div className="flex flex-col items-center gap-3">

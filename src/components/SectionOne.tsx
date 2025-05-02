@@ -64,7 +64,7 @@ const SectionOne = () => {
                   <h1 className="text-[#2C4343] text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-8 max-w-2xl">
                     When you download the Free <br className="hidden sm:block" />
                     Walking Meditation Series,<br className="hidden sm:block" />
-                    you'll gain access to
+                    you will gain access to
                   </h1>
                 </ScrollAnimation>
 
@@ -120,7 +120,7 @@ const SectionOne = () => {
           </div>
           <ScrollAnimation direction="up" delay={0.7}>
             <div>
-              <p className='text-white text-center'>Welcome to Elevate Unlimited by Anthony La Rocca – a unique approach to meditation designed for those who seek personal transformation on the go. Whether you're a seasoned meditator or new to mindfulness, our walking meditations help you connect with yourself, find balance, and elevate your life.</p>
+              <p className='text-white text-center'>Welcome to Elevate Unlimited by Anthony La Rocca – a unique approach to meditation designed for those who seek personal transformation on the go. Whether you are a seasoned meditator or new to mindfulness, our walking meditations help you connect with yourself, find balance, and elevate your life.</p>
             </div>
           </ScrollAnimation>
         </div>
