@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="#2C4343"/>
+  
+  <!-- Meditation Path Symbol -->
+  <path d="M128 256 Q 256 156, 384 256" stroke="white" stroke-width="32" fill="none"/>
+  <path d="M128 316 Q 256 216, 384 316" stroke="white" stroke-width="32" fill="none" opacity="0.7"/>
+  <path d="M128 376 Q 256 276, 384 376" stroke="white" stroke-width="32" fill="none" opacity="0.4"/>
+  
+  <!-- Centered Dot -->
+  <circle cx="256" cy="256" r="24" fill="white"/>
+</svg> 
