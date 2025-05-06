@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ScrollAnimation } from './ScrollAnimation';
+import { ScrollAnimation } from '../shared/ScrollAnimation';
 
 const SectionTwo = () => {
   return (

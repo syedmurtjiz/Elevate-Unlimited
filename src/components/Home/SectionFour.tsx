@@ -100,7 +100,7 @@ const SectionFour = () => {
 
           {/* Testimonial Cards Container */}
           <div className="flex justify-center items-stretch gap-8">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="sync">
               {getVisibleTestimonials().map((testimonial, index) => (
                 <motion.div
                   key={`${testimonial.id}-${index}`}

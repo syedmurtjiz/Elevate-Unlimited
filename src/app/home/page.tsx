@@ -1,14 +1,9 @@
-import Hero from '@/components/Hero';
-import SectionOne from '@/components/SectionOne';
-import SectionTwo from '@/components/SectionTwo';
-import SectionThree from '@/components/SectionThree';
-import SectionFour from '@/components/SectionFour';
-import SectionFive from '@/components/SectionFive';
-import SectionSix from '@/components/SectionSix';
+
+import {Hero, SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix} from '@/components/Home';
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Hero />
       <SectionOne />
       <SectionTwo />
@@ -16,6 +11,6 @@ export default function Home() {
       <SectionFive />
       <SectionFour />
       <SectionSix />
-    </>
+    </div>
   );
 } 

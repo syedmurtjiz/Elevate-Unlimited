@@ -26,7 +26,7 @@ export default function ConditionalLayout({
 
   return (
     <>
-      {!isLandingPage && <Header />}
+      {/* {!isLandingPage && <Header />} */}
       <main>{children}</main>
       {!isLandingPage && <Footer />}
     </>

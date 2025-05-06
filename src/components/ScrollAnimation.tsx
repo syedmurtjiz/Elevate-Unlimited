@@ -1,56 +1,73 @@
 "use client"
-import { motion, useInView } from 'framer-motion';
-import { useRef, ReactNode } from 'react';
+
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 interface ScrollAnimationProps {
-  children: ReactNode;
+  children: React.ReactNode;
   direction?: 'up' | 'down' | 'left' | 'right';
   delay?: number;
   className?: string;
 }
 
-type Direction = NonNullable<ScrollAnimationProps['direction']>;
-
-type DirectionOffset = {
-  x?: number;
-  y?: number;
-};
-
-export const ScrollAnimation = ({
+export const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
   children,
   direction = 'up',
   delay = 0,
-  className = '',
-}: ScrollAnimationProps) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  className = ''
+}) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  });
 
-  const directionOffset: Record<Direction, DirectionOffset> = {
-    up: { y: 50 },
-    down: { y: -50 },
-    left: { x: 50 },
-    right: { x: -50 },
+  const getDirectionAnimation = (direction: string) => {
+    const distance = 50;
+    switch (direction) {
+      case 'up':
+        return { y: distance };
+      case 'down':
+        return { y: -distance };
+      case 'left':
+        return { x: distance };
+      case 'right':
+        return { x: -distance };
+      default:
+        return { y: distance };
+    }
   };
 
-  const initialOffset = directionOffset[direction];
+  const animation = {
+    hidden: {
+      opacity: 0,
+      ...getDirectionAnimation(direction)
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut',
+        delay: delay
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
 
   return (
     <motion.div
       ref={ref}
-      initial={{
-        opacity: 0,
-        ...initialOffset,
-      }}
-      animate={{
-        opacity: isInView ? 1 : 0,
-        y: isInView ? 0 : initialOffset?.y ?? 0,
-        x: isInView ? 0 : initialOffset?.x ?? 0,
-      }}
-      transition={{
-        duration: 0.8,
-        delay: delay,
-        ease: 'easeOut',
-      }}
+      initial="hidden"
+      animate={controls}
+      variants={animation}
       className={className}
     >
       {children}

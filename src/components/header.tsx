@@ -6,7 +6,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between px-6 py-3 bg-blue-200">
+    <header className="flex items-center max-w-4xl mx-auto justify-between px-6 py-3 bg-transparent ">
       <Link href="/" className="flex items-center">
         <div className="w-6 h-6 mr-2">
           <Image 
@@ -22,8 +22,8 @@ const Header = () => {
 
       <nav className="hidden md:flex items-center space-x-4">
         <Link href="/home" className="text-gray-800 uppercase text-sm font-medium hover:text-gray-600">HOME</Link>
-        <Link href="/meet-anthony" className="text-gray-800 uppercase text-sm font-medium hover:text-gray-600">MEET ANTHONY</Link>
-        <Link href="/elevate" className="text-gray-800 uppercase text-sm font-medium hover:text-gray-600">ELEVATE UNLIMITED</Link>
+        <Link href="/meetanthony" className="text-gray-800 uppercase text-sm font-medium hover:text-gray-600">MEET ANTHONY</Link>
+        <Link href="/elevateunlimited" className="text-gray-800 uppercase text-sm font-medium hover:text-gray-600">ELEVATE UNLIMITED</Link>
         <Link href="/support" className="text-gray-800 uppercase text-sm font-medium hover:text-gray-600">SUPPORT</Link>
       </nav>
 

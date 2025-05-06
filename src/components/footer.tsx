@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image';
-const footer = () => {
+const Footer = () => {
   return (
 <div className='pl-2 pr-2'>
   <div className='flex flex-col justify-center items-center space-y-6 bg-[#E0FFFF] p-8 rounded-tl-lg rounded-tr-lg rounded-bl-lg rounded-br-lg shadow-md'>
@@ -65,4 +65,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer

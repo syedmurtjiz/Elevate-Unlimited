@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
-import { ScrollAnimation } from './ScrollAnimation';
+import { ScrollAnimation } from '../shared/ScrollAnimation';
 
 const SectionOne = () => {
   return (
@@ -22,40 +24,42 @@ const SectionOne = () => {
           {/* Content Container */}
           <div className="flex flex-col-reverse lg:flex-row gap-12 min-h-screen">
             {/* Left Section with Form */}
-            <ScrollAnimation direction="left" delay={0.2} className="w-full lg:w-1/3 flex items-end pt-8 sm:pt-12 md:pt-16 lg:pt-80">
-              <div className="w-full">
-                {/* Glass Card */}
-                <div className="bg-black/20 backdrop-blur-md rounded-xl p-6 text-white">
-                  <p className="text-base mb-6">
-                    Download the series today and take the first step towards transforming your mind and body, one walk at a time.
-                  </p>
+            <div className="w-full lg:w-1/3 flex items-end pt-8 sm:pt-12 md:pt-16 lg:pt-80">
+              <ScrollAnimation direction="left" delay={0.2}>
+                <div className="w-full">
+                  {/* Glass Card */}
+                  <div className="bg-black/20 backdrop-blur-md rounded-xl p-6 text-white">
+                    <p className="text-base mb-6">
+                      Download the series today and take the first step towards transforming your mind and body, one walk at a time.
+                    </p>
 
-                  <div className="space-y-4">
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="w-full px-4 py-3 rounded-md bg-white/80 border border-gray-200 text-gray-800 placeholder-gray-600 text-sm"
-                    />
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="w-full px-4 py-3 rounded-md bg-white/80 border border-gray-200 text-gray-800 placeholder-gray-600 text-sm"
-                    />
-                    <button
-                      type="submit"
-                      className="w-full bg-teal-800 hover:bg-teal-700 text-white font-medium py-3 px-4 rounded-md transition duration-300 text-sm uppercase"
-                    >
-                      DOWNLOAD NOW
-                    </button>
-                    <div className="text-center">
-                      <p className="text-xs">
-                        Need Help? <a href="#" className="text-white hover:underline">Click Here</a>
-                      </p>
+                    <div className="space-y-4">
+                      <input
+                        type="text"
+                        placeholder="Name"
+                        className="w-full px-4 py-3 rounded-md bg-white/80 border border-gray-200 text-gray-800 placeholder-gray-600 text-sm"
+                      />
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        className="w-full px-4 py-3 rounded-md bg-white/80 border border-gray-200 text-gray-800 placeholder-gray-600 text-sm"
+                      />
+                      <button
+                        type="submit"
+                        className="w-full bg-teal-800 hover:bg-teal-700 text-white font-medium py-3 px-4 rounded-md transition duration-300 text-sm uppercase"
+                      >
+                        DOWNLOAD NOW
+                      </button>
+                      <div className="text-center">
+                        <p className="text-xs">
+                          Need Help? <a href="#" className="text-white hover:underline">Click Here</a>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </ScrollAnimation>
+              </ScrollAnimation>
+            </div>
 
             {/* Right Section with Features */}
             <div className="w-full lg:w-2/3 flex flex-col lg:pl-20 xl:pl-32 2xl:pl-44 -mt-12">
