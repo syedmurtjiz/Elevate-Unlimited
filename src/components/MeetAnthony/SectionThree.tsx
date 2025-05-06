@@ -53,7 +53,7 @@ export default function SectionOne() {
     </div>
 
     <div className="bg-[#344648] p-3 w-50">
-      <div className="aspect-square w-full h-48 bg-[#CCDDD7] flex items-center justify-center relative">
+      <div className="w-full h-48 bg-[#CCDDD7] flex items-center justify-center relative">
         <div className="absolute -mt-30  inset-0">
           <img
             src="/Tony.png"
