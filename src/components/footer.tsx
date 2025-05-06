@@ -53,7 +53,7 @@ const Footer = () => {
         Privacy Policy
       </Link>
       <span className="text-gray-400"> | </span>
-      <Link href="/" className='text-gray-600 hover:text-gray-800 transition duration-200'>
+      <Link href="/contact" className='text-gray-600 hover:text-gray-800 transition duration-200'>
         Contact
       </Link>
     </div>
