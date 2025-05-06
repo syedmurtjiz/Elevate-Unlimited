@@ -10,7 +10,7 @@ export default function Layout({
     <div className="min-h-screen">
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/page2.png"
+          src="/Anthony.png"
           alt="Background"
           fill
           priority
