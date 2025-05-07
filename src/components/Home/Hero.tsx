@@ -20,11 +20,11 @@ export default function WalkingMeditationHero() {
     const handleMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event;
       const { innerWidth, innerHeight } = window;
-      
+
       // Convert mouse position to range -100 to 100
       const xPos = ((clientX / innerWidth) - 0.5) * 200;
       const yPos = ((clientY / innerHeight) - 0.5) * 200;
-      
+
       x.set(xPos);
       y.set(yPos);
     };
@@ -70,9 +70,9 @@ export default function WalkingMeditationHero() {
   };
 
   return (
-    <div className="p-2">
+    <div className="sm:p-2">
       <motion.div
-        className="relative h-screen w-full overflow-hidden rounded-3xl"
+        className="relative h-[80vh] sm:h-screen w-full overflow-hidden  sm:rounded-3xl"
         onHoverStart={handleHeroHover}
         onHoverEnd={handleHeroLeave}
       >
@@ -115,15 +115,11 @@ export default function WalkingMeditationHero() {
             </motion.div>
 
             {/* Gradient Overlay with Animation */}
-            <motion.div 
+            <motion.div
               className="absolute inset-0"
-              initial={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%)' }}
+
               animate={{
-                background: [
-                  'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%)',
-                  'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%)',
-                  'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%)'
-                ]
+
               }}
               transition={{
                 duration: 15,
@@ -132,9 +128,9 @@ export default function WalkingMeditationHero() {
                 ease: "linear"
               }}
             >
-              <motion.div 
-                className="absolute inset-0 bg-black/30"
-                whileHover={{ 
+              <motion.div
+                className="absolute inset-0"
+                whileHover={{
                   backdropFilter: "blur(4px)",
                   backgroundColor: "rgba(0, 0, 0, 0.4)",
                   transition: { duration: 0.5 }
@@ -146,10 +142,7 @@ export default function WalkingMeditationHero() {
                     '0% 0%'
                   ],
                 }}
-                style={{
-                  background: 'linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0.4))',
-                  backgroundSize: '200% 200%'
-                }}
+
                 transition={{
                   duration: 15,
                   repeat: Infinity,
@@ -162,8 +155,8 @@ export default function WalkingMeditationHero() {
         </motion.div>
 
         {/* Content */}
-        <motion.div 
-          className="relative h-full flex flex-col items-center justify-center px-6"
+        <motion.div
+          className="relative h-full flex flex-col items-center  md:justify-center"
           animate={contentControls}
           initial={{ y: 20, opacity: 0.8 }}
           style={{
@@ -172,11 +165,11 @@ export default function WalkingMeditationHero() {
           }}
         >
           <motion.h1
-            className="max-w-3xl text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-extrabold text-center text-white px-4 uppercase leading-tight tracking-tight drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]"
+            className="max-w-sm sm:max-w-2xl md:max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-center text-white/100 uppercase mb-2 sm:mb-4 px-4 sm:px-6 mt-10 sm:-mt-20"
             whileHover={{
               scale: 1.02,
               y: -10,
-              transition: { 
+              transition: {
                 duration: 0.3,
                 type: "spring",
                 stiffness: 300
@@ -187,11 +180,11 @@ export default function WalkingMeditationHero() {
           </motion.h1>
 
           <motion.h2
-            className="text-lg sm:text-xl md:text-base text-white font-medium pt-4 uppercase leading-tight tracking-tight drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]"
+            className="text-base sm:text-lg md:text-xl text-white font-medium uppercase mb-4 sm:mb-30 px-4 sm:px-6 text-center max-w-2xl"
             whileHover={{
               scale: 1.05,
               y: -5,
-              transition: { 
+              transition: {
                 duration: 0.3,
                 type: "spring",
                 stiffness: 300
@@ -202,12 +195,11 @@ export default function WalkingMeditationHero() {
           </motion.h2>
 
           <motion.button
-            className="mt-8 text-white border border-white/50 p-3 px-6 rounded-lg backdrop-blur-sm transition-all duration-300"
+            className="mt-46 sm:mt-8 text-white border border-white p-2 sm:p-3 px-4 sm:px-6 rounded-lg text-sm sm:text-base transition-all duration-300"
             whileHover={{
               scale: 1.1,
-              backgroundColor: "rgba(255, 255, 255, 0.2)",
               y: -5,
-              transition: { 
+              transition: {
                 duration: 0.3,
                 type: "spring",
                 stiffness: 400
@@ -218,7 +210,10 @@ export default function WalkingMeditationHero() {
             Get Your Free Walking Meditation Series
           </motion.button>
         </motion.div>
+
       </motion.div>
+
     </div>
+
   );
 }
