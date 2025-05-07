@@ -51,127 +51,127 @@ const SectionFour = () => {
   };
 
   return (
-    <div className='p-2'>
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/section5.png"
-          alt="Forest stream background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/20" />
-      </div>
+    <div className='p-1 sm:p-2'>
+      <div className="min-h-screen relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/section5.png"
+            alt="Forest stream background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/20" />
+        </div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        {/* Title */}
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-6xl font-bold text-white mb-2">SUCCESS</h2>
-          <div className="text-6xl font-light tracking-wider text-white/90" style={{ WebkitTextStroke: '1px white', WebkitTextFillColor: 'transparent' }}>
-            STORIES
-          </div>
-        </motion.div>
-
-        {/* Testimonials Slider */}
-        <div className="relative max-w-[1400px] mx-auto px-16">
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white transition-colors transform -translate-x-8"
-            aria-label="Previous testimonial"
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-12 sm:py-16 md:py-20">
+          {/* Title */}
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-8 sm:mb-12 md:mb-16"
           >
-            <IoIosArrowBack size={40} />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white transition-colors transform translate-x-8"
-            aria-label="Next testimonial"
-          >
-            <IoIosArrowForward size={40} />
-          </button>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2">SUCCESS</h2>
+            <div className="text-4xl sm:text-5xl md:text-6xl font-light tracking-wider text-white/90" style={{ WebkitTextStroke: '1px white', WebkitTextFillColor: 'transparent' }}>
+              STORIES
+            </div>
+          </motion.div>
 
-          {/* Testimonial Cards Container */}
-          <div className="flex justify-center items-stretch gap-8">
-            <AnimatePresence mode="sync">
-              {getVisibleTestimonials().map((testimonial, index) => (
-                <motion.div
-                  key={`${testimonial.id}-${index}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.1
-                  }}
-                  className="w-[350px] flex-shrink-0"
-                >
-                  <div 
-                    className="h-full bg-black/40 backdrop-blur-[8px] rounded-2xl p-8 relative group"
-                    style={{
-                      boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
-                      border: '1px solid rgba(255, 255, 255, 0.1)'
+          {/* Testimonials Slider */}
+          <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 md:px-16">
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white transition-colors transform -translate-x-2 sm:-translate-x-4 md:-translate-x-8"
+              aria-label="Previous testimonial"
+            >
+              <IoIosArrowBack size={24} className="sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white transition-colors transform translate-x-2 sm:translate-x-4 md:translate-x-8"
+              aria-label="Next testimonial"
+            >
+              <IoIosArrowForward size={24} className="sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            </button>
+
+            {/* Testimonial Cards Container */}
+            <div className="flex justify-center items-stretch gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-4 sm:pb-6 md:pb-8">
+              <AnimatePresence mode="sync">
+                {getVisibleTestimonials().map((testimonial, index) => (
+                  <motion.div
+                    key={`${testimonial.id}-${index}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.1
                     }}
+                    className="w-[280px] sm:w-[300px] md:w-[350px] flex-shrink-0"
                   >
-                    <div className="text-white text-lg mb-8">
-                      <span className="text-5xl font-serif text-white absolute -top-4 left-4 opacity-80">“</span>
-                      <p className="text-base leading-relaxed pt-4">{testimonial.quote}</p>
-                    </div>
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white/20">
-                        <Image
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          width={64}
-                          height={64}
-                          className="object-cover"
-                        />
+                    <div 
+                      className="h-full bg-black/40 backdrop-blur-[8px] rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 relative group"
+                      style={{
+                        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+                        border: '1px solid rgba(255, 255, 255, 0.1)'
+                      }}
+                    >
+                      <div className="text-white text-base sm:text-lg mb-6 sm:mb-8">
+                        <span className="text-4xl sm:text-5xl font-serif text-white absolute -top-2 sm:-top-4 left-2 sm:left-4 opacity-80">"</span>
+                        <p className="text-sm sm:text-base leading-relaxed pt-2 sm:pt-4">{testimonial.quote}</p>
                       </div>
-                      <div className="text-center">
-                        <div className="text-white/90 font-medium text-sm">{testimonial.name}</div>
-                        <div className="flex justify-center gap-1 mt-1">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <svg
-                              key={i}
-                              className="w-4 h-4 text-yellow-400"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                          ))}
+                      <div className="flex flex-col items-center gap-2 sm:gap-3">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/20">
+                          <Image
+                            src={testimonial.avatar}
+                            alt={testimonial.name}
+                            width={64}
+                            height={64}
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="text-center">
+                          <div className="text-white/90 font-medium text-xs sm:text-sm">{testimonial.name}</div>
+                          <div className="flex justify-center gap-0.5 sm:gap-1 mt-0.5 sm:mt-1">
+                            {[...Array(testimonial.rating)].map((_, i) => (
+                              <svg
+                                key={i}
+                                className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
 
-          {/* Dots Navigation */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white w-6' : 'bg-white/50'
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
+            {/* Dots Navigation */}
+            <div className="flex justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-white w-4 sm:w-6' : 'bg-white/50 w-1.5 sm:w-2'
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
