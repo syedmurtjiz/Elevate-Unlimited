@@ -1,9 +1,7 @@
 'use client'
 import React from 'react'
-import { useRouter } from 'next/navigation'
 
 const SectionFive = () => {
-  const router = useRouter();
 
   return (
     <div className='p-4'>

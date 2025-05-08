@@ -5,6 +5,7 @@ import { BsCalendar2Week } from 'react-icons/bs';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { ScrollAnimation } from '../shared/ScrollAnimation';
+import Image from 'next/image';
 
 export default function SectionThree() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -83,7 +84,7 @@ export default function SectionThree() {
                   <ScrollAnimation direction="left" delay={0.4}>
                     <div className="relative w-full sm:w-[300px] md:w-[400px] h-[200px] sm:h-[250px] overflow-hidden rounded-lg">
                       <div className="absolute inset-0 bg-black/10"></div>
-                      <img src={slide.left.image} alt="" className="w-full h-full object-cover" />
+                      <Image src={slide.left.image} alt="" className="w-full h-full object-cover" width={500} height={500} />
                       <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6">
                         <div className="w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center rounded-full -mt-1 mb-2 sm:mb-3">
                           {slide.left.icon}
@@ -101,7 +102,7 @@ export default function SectionThree() {
                   <ScrollAnimation direction="right" delay={0.4}>
                     <div className="relative w-full sm:w-[300px] md:w-[400px] h-[200px] sm:h-[250px] overflow-hidden rounded-lg">
                       <div className="absolute inset-0"></div>
-                      <img src={slide.right.image} alt="" className="w-full h-full object-cover opacity-50" />
+                      <Image src={slide.right.image} alt="" className="w-full h-full object-cover opacity-50" width={500} height={500} />
                       <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6">
                         <div className="w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center rounded-full">
                           {slide.right.icon}

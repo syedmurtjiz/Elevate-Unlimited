@@ -23,10 +23,11 @@ export default function SectionOne() {
     <div className="bg-[#344648] p-3  w-50">
       <div className="aspect-square w-full h-48 bg-[#CCDDD7]  flex items-center justify-center relative">
         <div className="absolute -mt-22 -ml-8 inset-0">
-          <img
+          <Image
             src="/Teal.png"
             alt="Tony Robbins"
-            className="object-cover w-full h-full"
+            className="object-cover"
+            fill
           />
         </div>
       </div>
@@ -39,10 +40,11 @@ export default function SectionOne() {
     <div className="bg-white  p-3  w-50">
       <div className="aspect-square w-full h-48 bg-[#CCDDD7]  flex items-center justify-center relative">
         <div className="absolute -mt-22  inset-0">
-          <img
+          <Image
             src="/Depak.png"
             alt="Tony Robbins"
-            className="object-cover w-full h-full"
+            className="object-cover"
+            fill
           />
         </div>
       </div>
@@ -55,10 +57,11 @@ export default function SectionOne() {
     <div className="bg-[#344648] p-3 w-50">
       <div className="w-full h-48 bg-[#CCDDD7] flex items-center justify-center relative">
         <div className="absolute -mt-30  inset-0">
-          <img
+          <Image
             src="/Tony.png"
             alt="Tony Robbins"
-            className="object-cover w-full h-full "
+            className="object-cover"
+            fill
           />
         </div>
       </div>
@@ -73,10 +76,11 @@ export default function SectionOne() {
     <div className="bg-[#344648] p-3 w-50">
       <div className="aspect-square w-full h-48 bg-[#CCDDD7] flex items-center justify-center relative">
         <div className="absolute -mt-30  inset-0">
-          <img
+          <Image
             src="/Bob.png"
             alt="Tony Robbins"
-            className="object-cover w-full h-full "
+            className="object-cover"
+            fill
           />
         </div>
       </div>
@@ -88,10 +92,11 @@ export default function SectionOne() {
     <div className="bg-[#344648] p-3 w-50">
       <div className="aspect-square w-full h-48 bg-[#CCDDD7] flex items-center justify-center relative">
         <div className="absolute -mt-30  inset-0">
-          <img
+          <Image
             src="/Sean.png"
             alt="Tony Robbins"
-            className="object-cover w-full h-full "
+            className="object-cover"
+            fill
           />
         </div>
       </div>
@@ -102,12 +107,17 @@ export default function SectionOne() {
     </div>
 <div className=''>
     
-    <img src="/Social.png" alt="Arrow" />
+    <Image 
+      src="/Social.png" 
+      alt="Arrow" 
+      width={500}
+      height={500}
+    />
     
     <div className='-mt-50'>
     <span className='text-sm text-[#344648] '>
     These teachers have inspired <br />
-     Elevate Unlimited’s approach <br />
+     Elevate Unlimited&apos;s approach <br />
       to meditative practice, <br />
        blending movement, sound, <br />
         and mindfulness to create a <br />

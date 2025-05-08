@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -91,9 +92,10 @@ const SectionFour = () => {
                 <div className="pr-4 md:pr-6">
                   <div className="flex flex-col md:flex-row rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-300 hover:scale-[1.02]">
                     <div className="w-full md:w-1/2 relative h-48 md:h-[441px] overflow-hidden">
-                      <img 
+                      <Image 
                         src={card.image} 
                         alt={card.title[0]} 
+                        fill
                         className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110" 
                       />
                     </div>
@@ -117,7 +119,7 @@ const SectionFour = () => {
                       
                       <div className="flex justify-end mt-8">
                         <div className="w-16 h-20 relative transform transition-transform duration-300 hover:scale-110">
-                          <img src="/wedico.png" alt="Custom Icon" className="w-full h-full" />
+                          <Image src="/wedico.png" alt="Custom Icon" className="w-full h-full" width={100} height={100} />
                         </div>
                       </div>
                     </div>

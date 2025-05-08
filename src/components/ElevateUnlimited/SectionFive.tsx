@@ -1,8 +1,9 @@
 'use client'
 import React from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion';
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube, FaTelegramPlane, FaDiscord } from 'react-icons/fa';
+import { motion } from 'framer-motion'
+import Image from 'next/image';
+// Social media icons removed
 
 const SectionFive = () => {
   const router = useRouter();
@@ -39,7 +40,7 @@ const SectionFive = () => {
             Get Unlimited Access Now
           </motion.button>
 <div className='mt-6'>        
-        <img src="/Frame82.png" alt="ElevateUnlimited" className="w-3xl" />
+        <Image src="/Frame82.png" alt="ElevateUnlimited" className="w-3xl" width={500} height={300} />
         </div>
       </div>
     </div>

@@ -175,9 +175,9 @@ const TestimonialSection = () => {
                     <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full -ml-12 -mb-12 blur-lg" />
                     
                     <div className="text-white mb-6 relative">
-                      <span className="text-5xl font-serif text-white absolute -top-4 left-0 opacity-70">"</span>
+                      <span className="text-5xl font-serif text-white absolute -top-4 left-0 opacity-70">&ldquo;</span>
                       <p className="text-sm leading-relaxed pt-5 text-white/90">{testimonial.quote}</p>
-                      <span className="text-5xl font-serif text-white absolute -bottom-6 right-2 opacity-70">"</span>
+                      <span className="text-5xl font-serif text-white absolute -bottom-6 right-2 opacity-70">&rdquo;</span>
                     </div>
                     
                     <div className="flex flex-col items-center gap-2 relative z-10">

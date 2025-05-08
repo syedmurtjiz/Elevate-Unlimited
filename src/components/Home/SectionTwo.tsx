@@ -35,7 +35,7 @@ const SectionTwo = () => {
           </ScrollAnimation>
           <ScrollAnimation direction="left" delay={0.5}>
             <p className="text-base sm:text-sm lg:text-md text-[#2C4343] leading-relaxed text-left max-w-xl">
-              Learn more about Anthony's story and the inspiration
+              Learn more about Anthony&apos;s story and the inspiration
               behind Elevate Unlimited.
             </p>
           </ScrollAnimation>

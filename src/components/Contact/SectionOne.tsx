@@ -89,8 +89,13 @@ export default function SectionOne() {
             </div>
 
             <div className="">
-  <img src="Image.png" alt="contact" className="w-[350px] h-[430px] object-cover" />
-</div>
+            <Image
+  src="/Image.png"
+  alt="contact"
+  width={350}
+  height={430}
+  className="w-[350px] h-[430px] object-cover"
+/></div>
 </div>
 </div>   </div>
     );

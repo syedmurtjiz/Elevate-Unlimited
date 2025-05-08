@@ -134,7 +134,7 @@ const SectionOne = () => {
           <ScrollAnimation direction="up" delay={0.7}>
             <div className="mt-4 sm:mt-6 md:mt-8 order-3 w-full">
               <p className="text-white text-center lg:text-left text-sm sm:text-base lg:text-lg w-full lg:px-22">
-                Welcome to Elevate Unlimited by Anthony La Rocca – a unique approach to meditation designed for those who seek personal transformation on the go. Whether you're a seasoned meditator or new to mindfulness, our walking meditations help you connect with yourself, find balance, and elevate your life.
+                Welcome to Elevate Unlimited by Anthony La Rocca – a unique approach to meditation designed for those who seek personal transformation on the go. Whether you&apos;re a seasoned meditator or new to mindfulness, our walking meditations help you connect with yourself, find balance, and elevate your life.
               </p>
             </div>
           </ScrollAnimation>
