@@ -180,7 +180,7 @@ export default function WalkingMeditationHero() {
           </motion.h1>
 
           <motion.h2
-            className="text-base sm:text-lg md:text-xl text-white font-medium uppercase mb-4 sm:mb-30 px-4 sm:px-6 text-center max-w-2xl"
+            className="text-base sm:text-lg md:text-sm font-extrabold text-white font-bold uppercase mb-4 sm:mb-30 px-4 sm:px-6 text-center max-w-2xl"
             whileHover={{
               scale: 1.05,
               y: -5,
